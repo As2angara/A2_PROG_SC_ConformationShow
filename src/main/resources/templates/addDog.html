@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dog Show Registration Form</title>
+<link rel="stylesheet" type="text/css" href = "css/style.css" th:href="@{/css/style.css}">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<body id = "register-background">
+	
+	<div class = "header" style = "padding: 50px">
+		<img src="/images/crest.png" height = "100">
+		<h1>Registration</h1> 
+		<a href = "/" class = "btn-nav">&larr; Go Back Home</a>
+	</div>
+	<div class = "container">
+		<nav class = "navigation">
+			<a href = "/addDog" class = "btn-nav" style = "color: #daad86; text-decoration: underline;">Register Contestant</a>
+			<a href = "/showTable" class = "btn-nav">Contestants Table</a>
+			<a href = "/breeds" class = "btn-nav">Groups</a>
+			<a href = "/searchPage" class = "btn-nav">Search</a>
+			<a href = "/showsPage" class = "btn-nav">Shows</a>
+		</nav>
+		<div id = "register-container-inner">
+			<h2>Register Your Dog Today!</h2>
+			<form  action = "" th:action = "@{/addContestant}" th:object = "${dog}" method = "GET">
+					Name: <input type = "text" th:field = "*{name}"><br><br>
+			  Owner Name: <input type = "text" th:field = "*{ownerName}"><br><br>
+				   Breed: <input type = "text" th:field = "*{breed}"><br><br>
+				  Groups: <select th:field = "*{group}">
+			  				<option value="Group 1, Sporting Dogs">Group 1, Sporting Dogs</option>
+			 				<option value="Group 2, Hounds">Group 2, Hounds</option>
+			 				<option value="Group 3, Working Dogs">Group 3, Working Dogs</option>
+			  				<option value="Group 4, Terriers">Group 4, Terriers</option>
+			  				<option value="Group 5, Toys">Group 5, Toys</option>
+			  				<option value="Group 6, Non-Sporting">Group 6, Non-Sporting</option>
+			  				<option value="Group 7, Herding">Group 7, Herding</option>
+						  </select><br><br>
+				  Gender: <input type="radio" th:field ="*{gender}" value="male"> Male
+			  			  <input type="radio" th:field ="*{gender}" value="female"> Female<br><br>
+			  	 Ranking: <input type="radio" th:field ="*{ranking}" value="class"> Class
+			  			  <input type="radio" th:field ="*{ranking}" value="specialty"> Specialty<br><br>
+			  			  Choose your Days: 
+			  	<table>
+			  	<tr><td>
+			  	<input type="checkbox" name="frishow" value="fri"> Friday, January 3 2020 </td>
+			  	</tr>
+			  	<tr><td>
+			  	<input type="checkbox" name="satshow" value="sat"> Saturday, January 4 2020 </td>
+			  	</tr>
+			  	<tr><td>
+			  	<input type="checkbox" name="sunshow" value="sun"> Sunday, January 5 2020 </td>
+			  	</tr>
+			  	</table> <br><br>
+			  			  Email: <input type="email" name="email"><br><br>
+			  			  <input type="submit" value="Submit">
+			  </form>
+		</div>
+	</div>
+
+</body>
+</html>

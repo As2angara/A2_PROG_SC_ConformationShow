@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Listing Of Groups, and Associated Breeds </title>
+<link rel="stylesheet" type="text/css" href = "css/style.css" th:href="@{/css/style.css}">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<body id = "groups-background">
+	
+	<div class = "header" style = "padding: 50px">
+		<img src="/images/crest.png" height = "100">
+		<h1>Group List Tables</h1> 
+		<a href = "/" class = "btn-nav">&larr; Go Back Home</a>
+	</div>
+	<div class = "container" style = "height: auto">
+		<nav class = "navigation">
+			<a href = "/addDog" class = "btn-nav" >Register Contestant</a>
+			<a href = "/showTable" class = "btn-nav">Contestants Table</a>
+			<a href = "/breeds" class = "btn-nav" style = "color: #daad86; text-decoration: underline;">Groups</a>
+			<a href = "/searchPage" class = "btn-nav">Search</a>
+			<a href = "/showsPage" class = "btn-nav">Shows</a>
+		</nav>
+		<div id = "groups-container-inner">
+			<h1>Group 1, Sporting Dogs:</h1>
+			<table>
+			<tr>
+				<th># of Dogs</th>
+				<th>Breed</th>
+				<th># Male Class</th>
+				<th># Female Class</th>
+				<th># Male Specialty</th>
+				<th># Female Specialty</th>
+			</tr>
+			<tr th:each = "breed: ${g1}">
+				<td th:text = "${breed.numBreed}"></td>
+				<td th:text = "${breed.breed}"></td>
+				<td th:text = "${breed.numMClass}"></td>
+				<td th:text = "${breed.numFClass}"></td>
+				<td th:text = "${breed.numMSpec}"></td>
+				<td th:text = "${breed.numFSpec}"></td>
+			</tr>
+			</table>
+	
+			<h1>Group 2, Hounds:</h1>
+	
+			<table>
+			<tr>
+				<th># of Dogs</th>
+				<th>Breed</th>
+				<th># Male Class</th>
+				<th># Female Class</th>
+				<th># Male Specialty</th>
+				<th># Female Specialty</th>
+			</tr>
+			<tr th:each = "breed: ${g2}">
+				<td th:text = "${breed.numBreed}"></td>
+				<td th:text = "${breed.breed}"></td>
+				<td th:text = "${breed.numMClass}"></td>
+				<td th:text = "${breed.numFClass}"></td>
+				<td th:text = "${breed.numMSpec}"></td>
+				<td th:text = "${breed.numFSpec}"></td>
+			</tr>
+			</table>
+	
+			<h1>Group 3, Working Dogs:</h1>
+	
+			<table>
+			<tr>
+				<th># of Dogs</th>
+				<th>Breed</th>
+				<th># Male Class</th>
+				<th># Female Class</th>
+				<th># Male Specialty</th>
+				<th># Female Specialty</th>
+			</tr>
+			<tr th:each = "breed: ${g3}">
+				<td th:text = "${breed.numBreed}"></td>
+				<td th:text = "${breed.breed}"></td>
+				<td th:text = "${breed.numMClass}"></td>
+				<td th:text = "${breed.numFClass}"></td>
+				<td th:text = "${breed.numMSpec}"></td>
+				<td th:text = "${breed.numFSpec}"></td>
+			</tr>
+			</table>
+			
+			<h1>Group 4, Terriers:</h1>
+	
+			<table>
+			<tr>
+				<th># of Dogs</th>
+				<th>Breed</th>
+				<th># Male Class</th>
+				<th># Female Class</th>
+				<th># Male Specialty</th>
+				<th># Female Specialty</th>
+			</tr>
+			<tr th:each = "breed: ${g4}">
+				<td th:text = "${breed.numBreed}"></td>
+				<td th:text = "${breed.breed}"></td>
+				<td th:text = "${breed.numMClass}"></td>
+				<td th:text = "${breed.numFClass}"></td>
+				<td th:text = "${breed.numMSpec}"></td>
+				<td th:text = "${breed.numFSpec}"></td>
+			</tr>
+			</table>
+			
+			<h1>Group 5, Toys:</h1>
+	
+			<table>
+			<tr>
+				<th># of Dogs</th>
+				<th>Breed</th>
+				<th># Male Class</th>
+				<th># Female Class</th>
+				<th># Male Specialty</th>
+				<th># Female Specialty</th>
+			</tr>
+			<tr th:each = "breed: ${g5}">
+				<td th:text = "${breed.numBreed}"></td>
+				<td th:text = "${breed.breed}"></td>
+				<td th:text = "${breed.numMClass}"></td>
+				<td th:text = "${breed.numFClass}"></td>
+				<td th:text = "${breed.numMSpec}"></td>
+				<td th:text = "${breed.numFSpec}"></td>
+			</tr>
+			</table>
+			
+			<h1>Group 6, Non-Sporting:</h1>
+	
+			<table>
+			<tr>
+				<th># of Dogs</th>
+				<th>Breed</th>
+				<th># Male Class</th>
+				<th># Female Class</th>
+				<th># Male Specialty</th>
+				<th># Female Specialty</th>
+			</tr>
+			<tr th:each = "breed: ${g6}">
+				<td th:text = "${breed.numBreed}"></td>
+				<td th:text = "${breed.breed}"></td>
+				<td th:text = "${breed.numMClass}"></td>
+				<td th:text = "${breed.numFClass}"></td>
+				<td th:text = "${breed.numMSpec}"></td>
+				<td th:text = "${breed.numFSpec}"></td>
+			</tr>
+			</table>
+			
+			<h1>Group 7, Herding:</h1>
+	
+			<table>
+			<tr>
+				<th># of Dogs</th>
+				<th>Breed</th>
+				<th># Male Class</th>
+				<th># Female Class</th>
+				<th># Male Specialty</th>
+				<th># Female Specialty</th>
+			</tr>
+			<tr th:each = "breed: ${g7}">
+				<td th:text = "${breed.numBreed}"></td>
+				<td th:text = "${breed.breed}"></td>
+				<td th:text = "${breed.numMClass}"></td>
+				<td th:text = "${breed.numFClass}"></td>
+				<td th:text = "${breed.numMSpec}"></td>
+				<td th:text = "${breed.numFSpec}"></td>
+			</tr>
+			</table>
+
+		</div>
+	</div>
+
+</body>
+</html>

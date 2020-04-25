@@ -1,0 +1,260 @@
+@charset "ISO-8859-1";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Fjalla One', sans-serif;
+	font-weight: 100;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ----- Button Types -------*/
+
+.btn-type1 {
+	padding: 30px 45px;
+	background-color: #659dbd;
+	color: white;
+	font-size: 1.5rem;
+	border-radius: 25px;
+	margin-top: 75px;
+}
+
+.btn-type1:hover {
+	background-color: rgba(0,0,0,0.7);
+}
+
+.btn-nav {
+	margin: 0 25px;
+	font-size: 1.5rem;
+	color: #fbeec1;
+}
+
+.btn-nav:hover {
+	color: #daad86;
+	text-decoration: underline;
+}
+
+input[type=submit] {
+	padding: 10px 30px;
+	background-color: #659dbd;
+	color: white;
+	font-size: 1.5rem;
+	border-radius: 25px;
+}
+
+input[type=submit]:hover {
+	background-color: rgba(0,0,0,0.7);
+}
+
+/* ----- General/ All--------*/
+.header {
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+	padding: 30px;
+	color: #f7f7f7;
+	font-size: 1.5rem;
+	height: auto;
+	width: 100%;
+}
+
+.container {
+	height: 700px;
+	width: 100%;
+	background-color: #f8f8f8;
+}
+
+.navigation {
+	height: 80px;
+	width: 100%;
+	background-color: #bc986a; /*#daad86;*/
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+ }
+ 
+ .bubble {
+ 	background-color: white;
+ 	border-radius: 15px;
+ 	text-align: center;
+ 	padding: 20px 20px 50px 20px;
+ 	margin: 0 0 10px 0;
+ }
+
+/* --- Home Page ------ */
+
+#home-background {
+	height: 100%; 
+	width: 100%;
+  	background-image: url("../images/DogOnBeach4.jpg"); 
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-attachment: fixed;
+}
+
+#home-container {
+	height: auto;
+}
+
+#home-container-inner {
+	display: grid;
+  	grid-template-areas:
+    'menu main main img'
+    'menu main main img';
+ 	grid-gap: 50px;
+ 	padding: 100px 50px;
+	width: 100%;
+	text-align: center;
+}
+
+#home-header {
+	height: 250px;
+	width: 100%;
+	margin:auto;
+	border-radius: initial;
+}
+
+/* ---- Register Page --------*/
+
+#register-background {
+	height: 100%; 
+	width: 100%;
+  	background-image: url("../images/DogOnBeach4.jpg"); 
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-attachment: fixed;
+}
+
+#register-container-inner {
+	padding: 50px 20px;
+	height: 620px;
+	width: 700px;
+	margin: auto;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+/*------- Table Page -------------*/
+#table-background {
+	height: 100%; 
+	width: 100%;
+  	background-image: url("../images/DogOnBeach4.jpg"); 
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-attachment: fixed;	
+}
+
+#table-container-inner {
+	padding: 30px 20px;
+	height: 100%;
+	width: 1000px;
+	margin: auto;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+/*------ Groups Page -----------*/
+
+#groups-background {
+	height: 100%; 
+	width: 100%;
+  	background-image: url("../images/DogOnBeach4.jpg"); 
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-attachment: fixed;	
+}
+
+#groups-container-inner {
+	padding: 30px 20px;
+	height: 100%;
+	width: 1000px;
+	margin: auto;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+/*---------Search Page-------------*/
+
+#search-background {
+	height: 100%; 
+	width: 100%;
+  	background-image: url("../images/DogOnBeach4.jpg"); 
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-attachment: fixed;	
+}
+
+#search-container-inner {
+	padding: 50px 20px;
+	height: 620px;
+	width: 700px;
+	margin: auto;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+/* --------Result Page ----------------*/
+
+#result-background {
+	height: 100%; 
+	width: 100%;
+  	background-image: url("../images/DogOnBeach4.jpg"); 
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-attachment: fixed;	
+}
+
+#result-container-inner {
+	padding: 50px 20px 300px 20px;
+	height: 100%;
+	width: 700px;
+	margin: auto;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+/* ------------- Login Page ----------------- */
+#login-container-inner {
+	padding: 100px;
+	margin: auto;
+}
+
+/* ------------ Handler Page ---------------------*/
+#handler-container-inner {
+	display: grid;
+  	grid-template-areas:
+    'menu1 main main menu'
+    'menu2 main main menu';
+ 	grid-gap: 50px;
+ 	padding: 100px 50px;
+	width: 100%;
+	text-align: center;
+}
+	
+

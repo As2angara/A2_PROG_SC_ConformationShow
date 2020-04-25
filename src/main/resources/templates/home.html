@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>The Great Canadian Dog Show</title>
+<link rel="stylesheet" type="text/css" href = "css/style.css" th:href="@{/css/style.css}">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<body class = "background" id = "home-background">
+	
+	<div class = "header" id = "home-header">
+		<img src = "images/crest.png" height ="200px" />
+	</div>
+	<div class = "container" id = "home-container">
+		<nav class = "navigation">
+			<a href = "/addDog" class = "btn-nav">Register Contestant</a>
+			<a href = "/showTable" class = "btn-nav">Contestants Table</a>
+			<!-- Add Logo Here -->
+			<a href = "/breeds" class = "btn-nav">Groups</a>
+			<a href = "/searchPage" class = "btn-nav">Search</a>
+			<a href = "/showsPage" class = "btn-nav">Shows</a>
+		</nav>
+		<div id = "home-container-inner">
+			
+			<div style = "grid-area: menu">
+				<div class = "bubble">
+					<h2>Click the button below in order to</h2> 
+					<h2 style = "margin-bottom: 50px">generate a set of dummy records.</h2>
+					<a href = "/generateData" class = "btn-type1">Generate Data</a>
+				</div>
+				
+				<div class = "bubble">
+					<h2 style = "margin-bottom: 50px" th:text="${login} ? 'Go To Handlers Page:' : 'Login as Handler'"></h2>
+					<a href = "/user" class = "btn-type1" th:text="${login} ? 'Dashboard' : 'Login'"></a>
+				</div>
+				
+			</div>
+			
+			<div style = "grid-area: main">
+				<h1>Welcome to The Great Canadian Dog Show!</h1>
+				<img src = "/images/crest2.png" height = "250px">
+				<h1>Next Show: Brampton Show Case 
+				<hr>
+				<h2>Friday, January 3rd 2020</h2>
+				<h2>Saturday, January 4th 2020</h2>
+				<h2 style = "margin-bottom: 20px">Sunday, January 50th 2020</h2>
+				
+				<p>Brampton Soccer Centre</p>
+				<p>1495 Sandalwood Pkwy E</p>
+				<p>Brampton, ON L6R 0K2</p>
+				<hr>
+				<p style = "margin-bottom: 20px">SHOW SECRETARY</p>
+				<p>MJN Show Services</p>
+				<p>9 Samya Court</p>
+				<p>Scarborough ON M1R 2A4</p>
+				<p>Tel. (416) 759-8593     Fax (416) 759-7790</p>
+				<p>www.mjnshowservices.com</p>
+				<hr>
+				<p>The building will be open to exhibitors from 4:00 p.m. on</p>
+				<p>Thursday, September 20, 2018 for setup</p>
+			</div>
+			
+			<div style = "grid-area: img" class = "bubble">
+				<h2>Featured:</h2>
+				<p>Burlington Show Case Best in Show</p>
+				<p>Jackie</p>
+				<img src = "/images/dogoftheweek.jpg" width = "200"/>
+				<p>Owner name: Jonathan</p>
+				<p>Breed: Huskie</p>
+				<p>Gender: Male</p>
+				<p>Ranking: Specialty</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

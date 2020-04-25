@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org"
+xlmns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>List of Contestants</title>
+<link rel="stylesheet" type="text/css" href = "css/style.css" th:href="@{/css/style.css}">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<body id = "table-background">
+	
+	<div class = "header" style = "padding: 50px">
+		<img src="/images/crest.png" height = "100">
+		<h1>Contestants Table</h1> 
+		<a href = "/" class = "btn-nav">&larr; Go Back Home</a>
+	</div>
+	<div class = "container" style = "height: auto">
+		<nav class = "navigation">
+			<a href = "/addDog" class = "btn-nav" >Register Contestant</a>
+			<a href = "/showTable" class = "btn-nav" style = "color: #daad86; text-decoration: underline;">Contestants Table</a>
+			<a href = "/breeds" class = "btn-nav">Groups</a>
+			<a href = "/searchPage" class = "btn-nav">Search</a>
+			<a href = "/showsPage" class = "btn-nav">Shows</a>
+		</nav>
+		
+		
+		<div id = "table-container-inner">
+		
+			
+			<h2>Good Luck to all!</h2>
+			<table>
+				<tr>
+					<th>Entry Number</th>
+					<th>Name</th>
+					<th>Owner Name</th>
+					<th>Breed</th>
+					<th>Group</th>
+					<th>Gender</th>
+					<th>Ranking</th>
+				</tr>
+				<tr th:each = "dog: ${list}">
+					<td th:text = "${dog.entryNum}"></td>
+					<td th:text = "${dog.name}"></td>
+					<td th:text = "${dog.ownerName}"></td>
+					<td th:text = "${dog.breed}"></td>
+					<td th:text = "${dog.group}"></td>
+					<td th:text = "${dog.gender}"></td>
+					<td th:text = "${dog.ranking}"></td>
+					<td><a href="" th:href="@{/edit/{entryNum}(entryNum=${dog.entryNum})}">Edit</a></td>
+					<td><a href="" th:href="@{/delete/{entryNum}(entryNum=${dog.entryNum})}">Delete</a></td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+
+</body>
+</html>

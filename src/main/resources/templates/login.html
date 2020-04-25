@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xlmns:th = "http://www.thymeleaf.org"
+xlmns:sec = "http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Search</title>
+<link rel="stylesheet" type="text/css" href = "css/style.css" th:href="@{/css/style.css}">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+<style>
+	input[type=submit] {
+	padding: 5px 20px;
+	background-color: #659dbd;
+	color: white;
+	font-size: 1.2rem;
+	border-radius: 15px;
+}
+
+input[type=submit]:hover {
+	background-color: rgba(0,0,0,0.7);
+}
+</style>
+
+</head>
+<body id = "result-background">
+	
+	<div class = "header" style = "padding: 50px">
+		<img src="/images/crest.png" height = "100">
+		<h1>Login</h1> 
+		<a href = "/" class = "btn-nav">&larr; Go Back Home</a>
+	</div>
+	<div class = "container" style = "height: auto">
+		<nav class = "navigation">
+			<a href = "/addDog" class = "btn-nav">Register Contestant</a>
+			<a href = "/showTable" class = "btn-nav">Contestants Table</a>
+			<a href = "/breeds" class = "btn-nav">Groups</a>
+			<a href = "/searchPage" class = "btn-nav">Search</a>
+			<a href = "/showsPage" class = "btn-nav">Shows</a>
+		</nav>
+		
+		<div id="login-container-inner" >
+			<div class = "bubble" style = "width: 350px; padding-top: 50px; margin: auto">
+			<h2>Login as a Handler:</h2>
+			<form th:action = "@{/login}" method = "post">
+				Username:<input type = "text" name = "username"/><br><br>
+				Password:<input type = "password" name = "password"/><br><br>
+				<input type = "submit" value = "login"/>
+			</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css" th:href="@{/css/style.css}">
+<link
+	href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap"
+	rel="stylesheet">
+<meta charset="ISO-8859-1">
+</head>
+<body id = "register-background">
+	<div class="header" style="padding: 50px">
+		<img src="/images/crest.png" height = "100">
+		<h1>Edit Dog Contestant</h1>
+		<a href="/" class="btn-nav">&larr; Go Back Home</a>
+	</div>
+	<div class="container">
+		<nav class="navigation">
+			<a href="/addDog" class="btn-nav">Register</a>
+			<a href="/showTable" class="btn-nav">Contestants Table</a> 
+			<a href="/breeds" class="btn-nav">Groups</a> 
+			<a href="/searchPage" class="btn-nav">Search</a>
+			<a href = "/showsPage" class = "btn-nav">Shows</a>
+		</nav>
+		<div id="register-container-inner">
+
+
+			<form th:action="@{/modify}" th:object="${dog}" method = "get">
+				<input type="hidden" name="entryNum" th:field="*{entryNum}">
+				Name: <input type="text" name="name" th:field="*{name}"><br>
+				Owner: <input type="text" name="ownerName"
+					th:value="${dog.ownerName}"><br> Breed: <input
+					type="text" name="breed" th:field="*{breed}"><br>
+				Groups: <select name="group" th:field="*{group}">
+			  				<option value="Group 1, Sporting Dogs" selected="selected">Group 1, Sporting Dogs</option>
+			 				<option value="Group 2, Hounds">Group 2, Hounds</option>
+			 				<option value="Group 3, Working Dogs">Group 3, Working Dogs</option>
+			  				<option value="Group 4, Terriers">Group 4, Terriers</option>
+			  				<option value="Group 5, Toys">Group 5, Toys</option>
+			  				<option value="Group 6, Non-Sporting">Group 6, Non-Sporting</option>
+			  				<option value="Group 7, Herding">Group 7, Herding</option>
+						  </select><br><br>
+				Gender: <input type="radio" th:field="*{gender}" value="male"> Male
+			  			  <input type="radio" th:field="*{gender}" value="female"> Female<br><br>
+				Ranking: <input type="radio" th:field="*{ranking}" value="Class"> Class
+			  			  <input type="radio" th:field="*{ranking}" value="Specialty"> Specialty<br><br>
+				<input type="submit" value="Edit Dog">
+			</form>
+
+		</div>
+	</div>
+</body>
+</html>

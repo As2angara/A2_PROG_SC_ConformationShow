@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search</title>
+
+<link rel="stylesheet" type="text/css" href = "css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+<style>
+	input[type=submit] {
+		padding: 5px 20px;
+		background-color: #659dbd;
+		color: white;
+		font-size: 1.2rem;
+		border-radius: 15px;
+	}
+
+	input[type=submit]:hover {
+		background-color: rgba(0,0,0,0.7);
+	}
+</style>
+</head>
+<body id = "search-background">
+	
+	<div class = "header" style = "padding: 50px">
+		<img src="/images/crest.png" height = "100">
+		<h1>Search</h1> 
+		<a href = "/" class = "btn-nav">&larr; Go Back Home</a>
+	</div>
+	<div class = "container">
+		<nav class = "navigation">
+			<a href = "/addDog" class = "btn-nav">Register Contestant</a>
+			<a href = "/showTable" class = "btn-nav">Contestants Table</a>
+			<a href = "/breeds" class = "btn-nav">Groups</a>
+			<a href = "/searchPage" class = "btn-nav" >Search</a>
+			<a href = "/showsPage" class = "btn-nav" style = "color: #daad86; text-decoration: underline;">Shows</a>
+		</nav>
+		<div id = "search-container-inner">
+				<h2>Search For Shows Here!</h2>
+				<form action = "/shows" method = "GET">
+		Search By:<select name="filter">
+                    <option value="fri_show">Friday, January 3 2020</option>
+                    <option value="sat_show">Saturday, January 4 2020</option>
+                    <option value="sun_show">Sunday, January 5 2020</option>
+   
+  				  </select>
+				  <input type = "submit" value = "Search"/>
+				</form>
+		</div>
+	</div>
+
+</body>
+</html>
